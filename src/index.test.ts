@@ -1,22 +1,15 @@
 require('dotenv').config();
 
-import fetch, { Headers } from 'node-fetch';
+import fetchCookie from 'fetch-cookie';
+import nodeFetch from 'node-fetch';
 
 import SonarQubeMetricHistoryApi from "./index";
 
 // We're patching the global fetch method to store cookies needed for
 // authorizing API requests:
-const cookies = new Set<string>();
-globalThis.fetch = async (url: RequestInfo, init: RequestInit | undefined) => {
-  if (cookies.size > 0) {
-    const headers = new Headers(init?.headers);
-    headers.set('Cookie', Array.from(cookies).join('; '));
-    init = Object.assign(init ?? {}, { headers });
-  }
-  const response = await fetch(url as any, init as any);
-  response.headers.raw()['set-cookie']?.forEach(cookie => cookies.add(cookie));
-  return response as any;
-};
+// TODO: use a headless browser to test how a browser would actually handle the
+// requests (in regards to cookies and CORS):
+globalThis.fetch = fetchCookie(nodeFetch) as unknown as typeof fetch;
 
 describe('SonarQubeMetricHistoryApi tests', () => {
   const api = new SonarQubeMetricHistoryApi(process.env.SONAR_URL!);

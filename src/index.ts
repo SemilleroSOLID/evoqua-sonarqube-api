@@ -13,6 +13,7 @@ export default class SonarQubeMetricHistoryApi implements MetricHistoryApi {
     const response = await fetch(url.toString(), {
       method: 'POST',
       body: new URLSearchParams({ login: username, password }),
+      credentials: 'include',
     });
     if (!response.ok) {
       throw new Error(await response.text());
@@ -23,7 +24,7 @@ export default class SonarQubeMetricHistoryApi implements MetricHistoryApi {
     : Promise<MetricHistory>
   {
     const url = this.getMetricHistoryRequestURL(projectId, metricKey);
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), { credentials: 'include' });
     if (!response.ok) {
       throw new Error(await response.text());
     }
@@ -52,7 +53,7 @@ export default class SonarQubeMetricHistoryApi implements MetricHistoryApi {
   // Turns out SonarQube doesn't need the project ID:
   async getMetrics(_projectId: string): Promise<Metric[]> {
     const url = new URL('/api/metrics/search', this.host);
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), { credentials: 'include' });
     if (!response.ok) {
       throw new Error(await response.text());
     }
@@ -73,7 +74,7 @@ export default class SonarQubeMetricHistoryApi implements MetricHistoryApi {
 
   async getProjectIds(): Promise<string[]> {
     const url = new URL('/api/projects/search', this.host);
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), { credentials: 'include' });
     if (!response.ok) {
       throw new Error(await response.text());
     }
