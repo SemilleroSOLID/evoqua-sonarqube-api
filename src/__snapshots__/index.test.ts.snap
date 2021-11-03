@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SonarQubeMetricHistoryApi tests getMetricHistory 1`] = `
+exports[`MetricHistoryApi tests getMetricHistory 1`] = `
 Object {
   "name": "code_smells",
   "values": Array [
@@ -16,7 +16,7 @@ Object {
 }
 `;
 
-exports[`SonarQubeMetricHistoryApi tests getMetrics 1`] = `
+exports[`MetricHistoryApi tests getMetrics 1`] = `
 Array [
   Object {
     "key": "new_technical_debt",
@@ -57,12 +57,32 @@ Array [
 ]
 `;
 
-exports[`SonarQubeMetricHistoryApi tests getProjectIds 1`] = `
+exports[`MetricHistoryApi tests getProjectIds 1`] = `
 Array [
   "CvLAC-scraper",
   "LogisticApp",
   "SCAPE-app",
   "TallerPSP01",
   "jlopezg8:TallerPSP1",
+]
+`;
+
+exports[`VersionMetricsApi tests getVersionMetrics 1`] = `
+Object {
+  "metrics": Array [
+    "Code Smells",
+    "Technical Debt",
+  ],
+  "values": Array [
+    14,
+    53,
+  ],
+  "version": "2021-05-07T09:42:24-0500",
+}
+`;
+
+exports[`VersionMetricsApi tests getVersions 1`] = `
+Array [
+  "2021-05-07T09:42:24-0500",
 ]
 `;
