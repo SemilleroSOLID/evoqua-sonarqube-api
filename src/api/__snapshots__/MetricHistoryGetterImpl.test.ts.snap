@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMetricHistory 1`] = `
+Object {
+  "metric": "Code Smells",
+  "values": Array [
+    14,
+    2,
+    0,
+  ],
+  "versions": Array [
+    "2021-05-07T09:42:24-0500",
+    "2021-05-09T00:30:02-0500",
+    "2021-07-29T23:39:01-0500",
+  ],
+}
+`;
+
+exports[`getMetrics 1`] = `
+Array [
+  Object {
+    "key": "new_technical_debt",
+    "name": "Added Technical Debt",
+  },
+  Object {
+    "key": "code_smells",
+    "name": "Code Smells",
+  },
+  Object {
+    "key": "effort_to_reach_maintainability_rating_a",
+    "name": "Effort to Reach Maintainability Rating A",
+  },
+  Object {
+    "key": "sqale_rating",
+    "name": "Maintainability Rating",
+  },
+  Object {
+    "key": "new_maintainability_rating",
+    "name": "Maintainability Rating on New Code",
+  },
+  Object {
+    "key": "new_code_smells",
+    "name": "New Code Smells",
+  },
+  Object {
+    "key": "sqale_index",
+    "name": "Technical Debt",
+  },
+  Object {
+    "key": "sqale_debt_ratio",
+    "name": "Technical Debt Ratio",
+  },
+  Object {
+    "key": "new_sqale_debt_ratio",
+    "name": "Technical Debt Ratio on New Code",
+  },
+]
+`;

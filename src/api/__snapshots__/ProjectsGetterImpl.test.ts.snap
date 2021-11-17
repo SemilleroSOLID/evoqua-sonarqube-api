@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getProjects 1`] = `
+Array [
+  Object {
+    "key": "CvLAC-scraper",
+    "name": "CvLAC-scraper",
+  },
+  Object {
+    "key": "LogisticApp",
+    "name": "LogisticApp",
+  },
+  Object {
+    "key": "SCAPE-app",
+    "name": "SCAPE-app",
+  },
+  Object {
+    "key": "TallerPSP01",
+    "name": "TallerPSP01",
+  },
+  Object {
+    "key": "jlopezg8:TallerPSP1",
+    "name": "TallerPSP1",
+  },
+]
+`;
