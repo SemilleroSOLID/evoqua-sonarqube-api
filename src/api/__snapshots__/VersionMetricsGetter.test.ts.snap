@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getVersionMetrics 1`] = `
+Object {
+  "metrics": Array [
+    "Code Smells",
+    "Technical Debt",
+  ],
+  "values": Array [
+    14,
+    53,
+  ],
+  "version": "2021-05-07T09:42:24-0500",
+}
+`;
+
+exports[`getVersions 1`] = `
+Array [
+  "2021-07-29T23:39:01-0500",
+  "2021-05-09T00:30:02-0500",
+  "2021-05-07T09:42:24-0500",
+]
+`;

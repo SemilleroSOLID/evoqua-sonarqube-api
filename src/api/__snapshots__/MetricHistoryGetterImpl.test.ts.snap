@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SonarQubeMetricHistoryApi tests getMetricHistory 1`] = `
+exports[`getMetricHistory 1`] = `
 Object {
-  "name": "code_smells",
+  "metric": "Code Smells",
   "values": Array [
     14,
     2,
@@ -16,53 +16,43 @@ Object {
 }
 `;
 
-exports[`SonarQubeMetricHistoryApi tests getMetrics 1`] = `
+exports[`getMetrics 1`] = `
 Array [
   Object {
     "key": "new_technical_debt",
-    "label": "Added Technical Debt",
+    "name": "Added Technical Debt",
   },
   Object {
     "key": "code_smells",
-    "label": "Code Smells",
+    "name": "Code Smells",
   },
   Object {
     "key": "effort_to_reach_maintainability_rating_a",
-    "label": "Effort to Reach Maintainability Rating A",
+    "name": "Effort to Reach Maintainability Rating A",
   },
   Object {
     "key": "sqale_rating",
-    "label": "Maintainability Rating",
+    "name": "Maintainability Rating",
   },
   Object {
     "key": "new_maintainability_rating",
-    "label": "Maintainability Rating on New Code",
+    "name": "Maintainability Rating on New Code",
   },
   Object {
     "key": "new_code_smells",
-    "label": "New Code Smells",
+    "name": "New Code Smells",
   },
   Object {
     "key": "sqale_index",
-    "label": "Technical Debt",
+    "name": "Technical Debt",
   },
   Object {
     "key": "sqale_debt_ratio",
-    "label": "Technical Debt Ratio",
+    "name": "Technical Debt Ratio",
   },
   Object {
     "key": "new_sqale_debt_ratio",
-    "label": "Technical Debt Ratio on New Code",
+    "name": "Technical Debt Ratio on New Code",
   },
-]
-`;
-
-exports[`SonarQubeMetricHistoryApi tests getProjectIds 1`] = `
-Array [
-  "CvLAC-scraper",
-  "LogisticApp",
-  "SCAPE-app",
-  "TallerPSP01",
-  "jlopezg8:TallerPSP1",
 ]
 `;

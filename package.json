@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/jlopezg8/evoqua-sonarqube-api#readme",
   "devDependencies": {
-    "@evoqua/types": "https://github.com/jlopezg8/evoqua-types.git#5388a0daced84828e69c75f453efdffd8e0caa91",
+    "@evoqua/types": "https://github.com/jlopezg8/evoqua-types.git#a46a9209c279b01e2e4ceaaf16cc322e367498e2",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.9.6",
     "dotenv": "^10.0.0",
@@ -37,6 +37,9 @@
   },
   "jest": {
     "preset": "ts-jest/presets/js-with-ts-esm",
+    "setupFiles": [
+      "./tests-setup.ts"
+    ],
     "testEnvironment": "node",
     "transformIgnorePatterns": [
       "node_modules/(?!(node-fetch|fetch-blob)/)"
