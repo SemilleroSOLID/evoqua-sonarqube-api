@@ -47,7 +47,7 @@ export default class SonarQubeApi
       projectKey, version, metrics);
   }
 
-  getVersions(projectKey: Project['key']): Promise<string[]> {
+  getVersions(projectKey: Project['key']): Promise<Version[]> {
     return this.versionMetricsGetter.getVersions(projectKey);
   }
 }

@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/jlopezg8/evoqua-sonarqube-api#readme",
   "devDependencies": {
-    "@evoqua/types": "https://github.com/jlopezg8/evoqua-types.git#a46a9209c279b01e2e4ceaaf16cc322e367498e2",
+    "@evoqua/types": "https://github.com/SemilleroSOLID/evoqua-types#a50ba83640b68ce82b9f8aed6cb8e945614633e4",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.9.6",
     "dotenv": "^10.0.0",

@@ -52,7 +52,7 @@ export default class VersionMetricsGetterImpl
     };
   }
 
-  async getVersions(projectKey: Project['key']): Promise<string[]> {
+  async getVersions(projectKey: Project['key']): Promise<Version[]> {
     const url = this.getVersionsRequestURL(projectKey);
     const data = await this.request(url);
     return this.getVersionsFromResponse(data);
@@ -64,7 +64,7 @@ export default class VersionMetricsGetterImpl
     return url;
   }
 
-  private getVersionsFromResponse(response: any): string[] {
+  private getVersionsFromResponse(response: any): Version[] {
     return (response
       .analyses as Analysis[])
       .map(analysis => analysis.date);
